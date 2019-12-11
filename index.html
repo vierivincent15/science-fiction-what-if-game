@@ -24,10 +24,9 @@
             </nav>
         </header>
         <main>
-            <br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/>
             <div class="component-center">
+                <div class="text-justify mb-5 mt-3" id="typed" style="min-height:50vh;width:50vw">
+                </div>
                 <p><a class="btn btn-primary" href="sub-pages/start.html" role="button">Start Game</a></p>
                 <p><a class="btn btn-primary" href="about.html" role="button">About Us</a></p>
             </div>
@@ -35,5 +34,21 @@
         <footer>
 
         </footer>
+        <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+        <script src='scripts/jquery.typer.js'></script>
+        <script>
+            var type = $('#typed');
+            var totype = "<h1>Lorem Ipsum</h1>\
+                    Some quick example text to build on the card title and make up the bulk of the card's content.\
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.\
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..."
+            var options = {"endless":false,
+                           "duration":550}
+            type.typer([totype], options);
+        </script>
     </body>
 </html>
