@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <title>wHaT iF gAmE ??</title>
+        <title>HASS Digital Humanities Project</title>
     </head>
     <style>
         .component-center {
@@ -15,34 +15,30 @@
             align-items: center;
             flex-direction: column;
         }
-        .square-button {
-            height: 4vw;
-            width: 5vw;
-        }
     </style>
     <body>
         <!-- <embed src="bg-sound.mp3" AutoPlay loop hidden> -->
         <header>
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">Our Game Title</a>
+            <nav class="navbar navbar-light bg-dark">
+                <a class="navbar-brand text-white" href="#">Our Game Title</a>
             </nav>
         </header>
-        <main>
+        <main style="background-image: url('../bgs/subt-bg.jpg'); background-size:100% 100%; background-repeat:no-repeat; min-height:100vh;">
             <div class="container" style="padding-left: 12vw; padding-right: 10vw">
                 <div class="row">
                     <div class="col-7 component-center pt-3">
                         <div class="row mb-4">
                             <!-- Image -->
-                            <img src="../scenes/placeholder.png" class="img-fluid img-thumbnail" alt="Image Not Found">
+                            <img src="../scenes-subt/placeholder.png" class="img-fluid img-thumbnail" alt="Image Not Found">
                         </div>
                         <div class="row">
                             <div class="col">
                                 <!-- Button A -->
-                                <a class="btn btn-primary" href="#" role="button">Button 1</a>
+                                <a name="btn-1" class="btn btn-primary disabled" href="#" role="button">Button 1</a>
                             </div>
                             <div class="col">
                                 <!-- Button B -->
-                                <a class="btn btn-primary" href="#" role="button">Button 2</a>
+                                <a name="btn-2" class="btn btn-primary disabled" href="#" role="button">Button 2</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +47,7 @@
                             <div class="card-header">
                                 <h5 class="card-title mb-0">Card Title</h5>
                             </div>
-                            <div class="card-body overflow-auto" style="max-height:40vh">
+                            <div name="level-desc" class="card-body overflow-auto" style="max-height:50vh">
                                 <p class="card-text">
                                     <!-- Insert Text Here -->
                                     Some quick example text to build on the card
@@ -71,16 +67,21 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="mt-5">
-                            <a class="btn btn-dark mr-4 square-button" href="start.html" role="button"><i class="material-icons text-center" style="font-size:250%;">refresh</i></a>
-                            <a class="btn btn-dark ml-4 square-button" href="../index.html" role="button"><i class="material-icons text-center" style="font-size:250%;">home</i></a>
-                        </div>
                     </div>
                 </div>
             </div>
         </main>
-        <footer>
+        <script>
+            document.getElementsByName("level-desc")[0].addEventListener("scroll", checkScrollHeight, false);
 
-        </footer>
+            function checkScrollHeight() {
+                var scrollElement = document.getElementsByName("level-desc")[0];
+            
+                if (scrollElement.clientHeight + scrollElement.scrollTop >= scrollElement.scrollHeight) {
+                    document.getElementsByName("btn-1")[0].classList.remove("disabled");
+                    document.getElementsByName("btn-2")[0].classList.remove("disabled");    
+                }
+            }
+        </script>
     </body>
 </html>
