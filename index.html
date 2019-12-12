@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <title>HASS Digital Humanities Project</title>
+        <title>HASS Science Fiction Project</title>
     </head>
     <style>
         .component-center {
@@ -24,9 +24,9 @@
         </header>
         <main>
             <div class="component-center border-0 rounded-lg" style="background-color: rgba(196,196,207,0.75); margin-left:20vw; margin-right:20vw; margin-top:8vh">
-                <div class="text-justify pb-5 mt-3" id="typed" style="min-height:50vh;width:50vw;font-weight:500;">
+                <div class="text-justify pb-4 mt-3" id="typed" style="min-height:57vh;width:50vw;font-weight:500;">
                 </div>
-                <p style="width:20vw;"><a class="btn btn-dark btn-lg btn-block" href="how-to-play.html" role="button">Start Game</a></p>
+                <p style="width:20vw;"><a class="btn btn-dark btn-block" href="how-to-play.html" role="button">Start Game</a></p>
                 <p class="mb-4"><a class="btn btn-light btn-sm" href="about.html" role="button">About Us</a></p>
             </div>
         </main>
@@ -34,14 +34,22 @@
         <script src='scripts/jquery.typer.js'></script>
         <script>
             var type = $('#typed');
-            var totype = "<h1 class='text-center'>Lorem Ipsum</h1>\
-                    Some quick example text to build on the card title and make up the bulk of the card's content.\
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.\
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\
-                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..."
+            var totype = "<h3 class='text-center'>Five Hundred Credits</h3>\
+                    <p class='mb-2'>\
+                    You’re living in Singapore, in the year 2219.\
+                    It is the era of a “new and improved” Singapore: a shared economy where a Social Credit System is a tool used in smart cities.\
+                    Based on a citizen’s behaviour and interpersonal relationships, he or she can gain/lose credits.\
+                    Bad behavior elicits a loss of credits while good behaviour is rewarded with more credits.\
+                    Naturally, this causes inequality within the society, with some communities receiving greater privileges while others face discrimination and restrictions.\
+                    </p>\
+                    <p class='mb-2'>\
+                    Singapore’s environment as a smart city: Singapore has been flooded for over 100 years, Humans now live either above the clouds or underground.\
+                    After huge technological advancements over the years, the Singapore government now has the ability to closely monitor your behaviour.\
+                    “Big Brother” is used in conjunction with the Social Credit System to strictly monitor the behaviour of Singapore’s citizens.\
+                    </p>\
+                    <p class='mb-0'>\
+                    To experience living in Singapore 2219, go ahead and start the game!\
+                    </p>"
             var options = {"endless":false,
                            "duration":250}
             type.typer([totype], options);

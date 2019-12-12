@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>HASS Science Fiction Project</title>
+    </head>
+    <style>
+        .component-center {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        a.disabled {
+            cursor: not-allowed;
+            pointer-events: all !important;
+        }
+    </style>
+    <body>
+        <!-- <embed src="bg-sound.mp3" AutoPlay loop hidden> -->
+        <header>
+            <nav class="navbar navbar-light bg-dark">
+                <a class="navbar-brand text-white" href="#">Five Hundred Credits</a>
+            </nav>
+        </header>
+        <body style="background-image: url('../bgs/subt-bg.jpg'); background-size:100% 100%; background-repeat:no-repeat; min-height:100vh;">
+            <div class="container" style="padding-left: 12vw; padding-right: 10vw">
+                <div class="row">
+                    <div class="col-7 component-center pt-3">
+                        <div class="row mb-4">
+                            <!-- Image -->
+                            <img src="../scenes-subt/sick-sis.jpg" class="img-fluid img-thumbnail" alt="Image Not Found">
+                        </div>
+                        <div class="text-center">
+                            <!-- Button A -->
+                            <a name="btn-a" class="btn btn-primary disabled" href="#" role="button">Help your sister (+0)</a>
+                            <span class="mx-3"></span>
+                            <!-- Button B -->
+                            <a name="btn-b" class="btn btn-primary disabled" href="#" role="button">Keep credits to yourself (+80)</a>
+                        </div>
+                    </div>
+                    <div class="col-5 pt-3 component-center">
+                        <div class="card bg-light mb-3" style="max-width:18em;">
+                            <div class="card-header">
+                                <h5 class="card-title text-center mb-0">Accidental Extra Credits</h5>
+                            </div>
+                            <div name="level-desc" class="card-body overflow-auto" style="max-height:50vh">
+                                <p class="card-text text-justify">
+                                    <!-- Insert Text Here -->
+                                    The government has unknowingly deposited 80 credits into your bank,
+                                    bringing you that much closer to your goal of becoming an Aeronaut.
+                                    An objective which would otherwise take an average of 5 years to achieve.
+                                    However, you are well aware that your sickly sister Amy, could use these
+                                    credits to pay for a surgery that would guarantee her good health for the
+                                    foreseeable future. You have the option to either help your sister, or keep
+                                    the extra credits for yourself to increase your chances of advancing to an
+                                    Aeronaut. Do you help your sister with the extra credits? Or do you keep the
+                                    extra credits to yourself?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            document.getElementsByName("level-desc")[0].addEventListener("scroll", checkScrollHeight, false);
+
+            function checkScrollHeight() {
+                var scrollElement = document.getElementsByName("level-desc")[0];
+            
+                if (scrollElement.clientHeight + scrollElement.scrollTop >= scrollElement.scrollHeight) {
+                    var btn_a = document.getElementsByName("btn-a")[0]
+                    btn_a.classList.remove("disabled");
+                    btn_a.href="1-a.html";
+
+                    var btn_b = document.getElementsByName("btn-b")[0]
+                    btn_b.classList.remove("disabled");
+                    btn_b.href="1-b.html";    
+                }
+            }
+        </script>
+    </body>
+</html>
